@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+	background-color: #222;
+	position: relative;
+	.content {
+		text-align: center;
+		padding: 50px 0;
+		color: #fff;
+		font-size: 1.5rem;
+		a {
+			color: $brand-color;
+		}
+	}
+}

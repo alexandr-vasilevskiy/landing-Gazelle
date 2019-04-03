@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the s-history of the site/application.
+// -----------------------------------------------------------------------------
+.s-history {
+	position: relative;
+	padding: 0;
+	background-repeat: no-repeat;
+    background-size: auto;
+    background-color: #f1f0f8;
+    position: relative;
+    &::after, &::before {
+		content: '';
+		position: absolute;
+    }
+    &::after {
+	    top: 210px;
+		right: 0;
+		width: calc(100% - 1135px);
+		height: 130px;
+		background-color: #fff;
+		z-index: 1;
+    }
+	&::before {
+		bottom: 5%;
+		left: -5px;
+		background-image: url(../img/tabs-d-element.png);
+		width: 540px;
+		height: 130px;
+		background-repeat: no-repeat;
+	}
+	.section-overlay {
+		padding: 120px 0;
+		&::before {
+			content: none;
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			top: 50px;
+			left: 50px;
+			width: 345px;
+			height: 400px;
+			background-image: url(../img/triangle-element.png);
+			background-repeat:  no-repeat;
+	    }
+	}
+	.row {
+		&:nth-child(2) {
+			margin-top: 15%;
+		}
+		> div {
+			z-index: 5;
+		}
+	}
+    .h2 {
+		font-weight: normal;
+		color: #000;
+		font-size: 4.75rem;
+		margin-bottom: 80px;
+		display: block;
+		span {
+			&:first-child {
+				text-transform: uppercase;
+				display: block;
+			}
+			&:last-child {
+				display: block;
+				white-space: nowrap;
+			}
+		}
+	}
+	p {
+		font-size: 2.08125rem;
+		line-height: 1.2;
+		color: #000;
+	}
+	.img-wrapper {
+		text-align: center;
+		img {
+			max-width: 100%;
+		}
+	}
+}

@@ -1,0 +1,140 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the owl carousel component.
+// -----------------------------------------------------------------------------
+
+.boots-carousel {
+	position: relative;
+	.boots-carousel-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.img-wrapper {
+			margin-bottom: 50px;
+			position: relative;
+			&::after {
+				position: absolute;
+			    content: '';
+		        bottom: -20px;
+   				right: 15%;
+			    background-image: url(../img/boots/boots-shadow.png);
+			    width: 331px;
+			    height: 154px;
+			    background-size: contain;
+			    z-index: -1;
+				
+			}
+			img {
+				max-height: 625px;
+			}
+		}
+		.button-wrapper {
+			padding-bottom: 5px;
+		}
+	}
+	.owl-nav {
+		display: block !important;
+		position: absolute;
+		content: '';
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		width: 100%;
+		height: 70px;
+		button {
+			width: 70px;
+			position: absolute;
+			content: '';
+			transition: 0.2s linear all;
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+		.owl-prev {
+			img {
+				transform: rotate(180deg);
+			}
+		}
+		.owl-next {
+			right: 0;
+			left: auto;
+		}
+	}
+}
+
+
+.feedback-carousel {
+	position: relative;
+	display: flex !important;
+	flex-direction: column;
+	.owl-dots {
+		order: 1;
+	}
+	.owl-stage-outer {
+		order: 2;
+	}
+	.feedback-carousel-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: #f1f0f8;
+		.title {
+			font-size: 2.1875rem;
+			margin-bottom: 40px;
+		}
+		p {
+			font-size: 1.5675rem;
+			width: 75%;
+			margin: 0 auto;
+		}
+	}
+	.owl-dots {
+		display: flex;
+		width: calc(100% - 100px);
+		margin: 0 auto;
+		padding: 65px 0;
+
+		button {
+			position: relative;
+			width: 280px;
+			height: 280px;
+			transition: 0.2s all linear;
+		    margin-left: -30px;
+			&:nth-child(2) {
+				span {
+					background-image: url(../img/feedback/feedback2.png);
+					z-index: 2;
+				}
+			}
+			&:nth-child(3) {
+				span {
+					background-image: url(../img/feedback/feedback3.png);
+					z-index: 1;
+				}
+			}
+			span {
+				position: absolute;
+				content: '';
+				width: 280px;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background-size: cover;
+				background-image: url(../img/feedback/feedback1.png);
+				transition: 0.2s all ease;
+				border-radius: 50%;
+				&:hover {
+					transform: scale(1.1);
+				}
+				
+			}
+			&.active {
+				z-index: 5;
+				transform: scale(1.15) translateY(-30px);
+				span {
+					box-shadow: 2px 2px 3px rgba(253,209,0,.5), inset -2px -2px 3px 1px rgba(253,209,0,.5);
+				}
+			}
+		}
+	}
+}

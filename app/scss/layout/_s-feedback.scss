@@ -1,0 +1,42 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the s-feedback of the site/application.
+// -----------------------------------------------------------------------------
+
+.s-feedback {
+	padding: 120px 0;
+	position: relative;
+	.h2 {
+		text-align: center;
+		span {
+			text-align: center;
+			font-size: 4.5rem;
+			font-weight: 400;
+			padding-left: 80px;
+			position: relative;
+			&::before {
+				position: absolute;
+				content: '';
+				background: url(../img/svg/feedback-01.svg);
+				left: 0;
+				width: 60px;
+				height: 60px;
+			}
+		}
+	}
+	&::after, &::before {
+		position: absolute;
+		content: '';
+		width: 425px;
+		height: 150px;
+		background-image: url(../img/feedback/feedback-bg.png);
+		background-repeat: repeat;
+		top: 25%;
+		right: 50px;
+	}
+	&::before {
+		right: auto;
+		top: auto;
+		left: 50px;
+		bottom: 30%;
+	}
+}

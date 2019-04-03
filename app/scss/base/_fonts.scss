@@ -1,0 +1,10 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+@import "../abstracts/_mixins";
+
+@include font-face("akrobat", "../fonts/Akrobat-Regular/Akrobat-Regular");
+@include font-face("akrobat", "../fonts/Akrobat-Bold/Akrobat-Bold", bold);
+@include font-face("futura", "../fonts/Futura regular/Futura regular");
+@include font-face("futura", "../fonts/Futura bold/Futura bold", bold);
+@include font-face("futura", "../fonts/Futura light/Futura light", 200);
